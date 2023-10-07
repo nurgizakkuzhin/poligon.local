@@ -7,6 +7,8 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+### Установка
+
 Установка laravel через Composer
 > composer create-project --prefer-dist laravel/laravel
 
@@ -15,8 +17,7 @@
 
 Устанавка базовых пакетов и плагинов
 > Laravel Plugin
-
-> composer require --dev barryvdh/laravel-ide-helper=v2.7
+>> composer require --dev barryvdh/laravel-ide-helper=v2.7
 
 > `"scripts": {
 "post-update-cmd": [
@@ -27,5 +28,12 @@
 
 > composer require --dev barryvdh/laravel-debugbar=v3.4
 
+### Создание БД
 
+> Создаем БД poligon
+>> CREATE SCHEMA `poligon` DEFAULT CHARACTER SET ut8mb4 COLLATE utf8mb4_unicode_ci;
 
+> Создаем модели и миграции
+>> php artisan make:model Models/BlogCategory -m
+> 
+>> php artisan make:model Models/BlogPost -m
